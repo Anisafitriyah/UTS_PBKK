@@ -26,6 +26,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role', // tambahkan ini
     ];
 
     /**
@@ -34,7 +35,7 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $hidden = [
-        'password',
+        // 'password',
         'remember_token',
     ];
 
@@ -46,7 +47,7 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
+            // 'email_verified_at' => 'datetime',
             'membership_date' => 'date',
             'password' => 'hashed',
         ];
